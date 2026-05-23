@@ -10,15 +10,14 @@ document.querySelector("#app").innerHTML = `
 
 <div class="side-ads left-ads">
 
-<a href="https://www.lipmt.in/" target="_blank">
 
-<img src="./post1.png">
+<img src="/post1.png">
 
 </a>
 
-<a href="https://www.lipmt.in/" target="_blank">
 
-<img src="./post2.png">
+
+<img src="/post2.png">
 
 </a>
 
@@ -34,7 +33,7 @@ document.querySelector("#app").innerHTML = `
 
 <h1>
 
-⭐ <span class="lal-red">Swarn</span>
+⭐ <span class="lal-red">LaL</span>
 
 <span class="blue-text">
 INSTITUTE OF PARA MEDICAL TECHNOLOGY 
@@ -78,13 +77,13 @@ paramedical sciences.
 
 <a href="https://www.lipmt.in/" target="_blank">
 
-<img src="./post3.png">
+<img src="/post3.png">
 
 </a>
 
 <a href="https://www.lipmt.in/" target="_blank">
 
-<img src="./post4.png">
+<img src="/post4.png">
 
 </a>
 

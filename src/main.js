@@ -4,7 +4,7 @@ document.querySelector("#app").innerHTML = `
 
 <div class="page-logo">
 
-<img src="/logo.png">
+<img src="./logo.png">
 
 </div>
 
@@ -12,13 +12,13 @@ document.querySelector("#app").innerHTML = `
 
 <a href="https://www.lipmt.in/" target="_blank">
 
-<img src="/post1.png">
+<img src="./post1.png">
 
 </a>
 
 <a href="https://www.lipmt.in/" target="_blank">
 
-<img src="/post2.png">
+<img src="./post2.png">
 
 </a>
 
@@ -78,13 +78,13 @@ paramedical sciences.
 
 <a href="https://www.lipmt.in/" target="_blank">
 
-<img src="/post3.png">
+<img src="./post3.png">
 
 </a>
 
 <a href="https://www.lipmt.in/" target="_blank">
 
-<img src="/post4.png">
+<img src="./post4.png">
 
 </a>
 

@@ -34,7 +34,7 @@ document.querySelector("#app").innerHTML = `
 
 <h1>
 
-⭐ <span class="lal-red">LAL</span>
+⭐ <span class="lal-red">Swarn</span>
 
 <span class="blue-text">
 INSTITUTE OF PARA MEDICAL TECHNOLOGY 

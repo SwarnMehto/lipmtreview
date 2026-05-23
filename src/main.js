@@ -136,9 +136,7 @@ reviewsDiv.innerHTML = `
 <p>${data.review}</p>
 
 <button onclick="copyReview(\`${data.review}\`)">
-
 Copy Review
-
 </button>
 
 <a
@@ -146,9 +144,7 @@ href="https://maps.app.goo.gl/efkSvmwZUHpjZ6jQ7"
 target="_blank">
 
 <button class="google-btn">
-
 Post Review ⭐
-
 </button>
 
 </a>
@@ -170,8 +166,9 @@ reviewsDiv.innerHTML =
 
 }
 
-document.getElementById("five")
-.onclick = generateReviews;
+document.getElementById("five").onclick = () => generateReviews(5);
+
+document.getElementById("four").onclick = () => generateReviews(4);
 window.copyReview = function(text){
 
 navigator.clipboard.writeText(text);

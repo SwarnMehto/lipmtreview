@@ -15,8 +15,11 @@ app.use(express.json());
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// PUBLIC FOLDER SERVE
+// PUBLIC FOLDER
 app.use(express.static(path.join(__dirname, "public")));
+
+// DIST FOLDER
+app.use(express.static(path.join(__dirname, "dist")));
 
 const genAI = new GoogleGenerativeAI(
   process.env.GEMINI_API_KEY
@@ -41,17 +44,12 @@ app.post("/generate-review", async (req, res) => {
 
     const text = response.text();
 
-    console.log(text);
-
     res.json({
       review: text
     });
 
-  }
+  } catch (error) {
 
-  catch (error) {
-
-    console.log("FULL ERROR:");
     console.log(error);
 
     res.status(500).json({
@@ -62,8 +60,13 @@ app.post("/generate-review", async (req, res) => {
 
 });
 
-app.listen(5000, () => {
+// FRONTEND SERVE
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
+});
 
-  console.log("Server running on port 5000");
+const PORT = process.env.PORT || 5000;
 
+app.listen(PORT, () => {
+  console.log(`Server running on ${PORT}`);
 });

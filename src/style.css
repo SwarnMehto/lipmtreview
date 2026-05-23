@@ -412,3 +412,26 @@ font-weight:500;
 color:#070707;
 font-size:30px;
 }
+.side-ads{
+position: fixed;
+top: 50%;
+transform: translateY(-50%);
+display: flex;
+flex-direction: column;
+gap: 20px;
+z-index: 999;
+}
+
+.left-ads{
+left: 20px;
+}
+
+.right-ads{
+right: 20px;
+}
+
+.side-ads img{
+width: 180px;
+border-radius: 15px;
+box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}

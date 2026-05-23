@@ -92,37 +92,6 @@ paramedical sciences.
 
 `;
 
-const reviewsDiv =
-document.getElementById("reviews");
-
-async function generateReviews(star){
-
-reviewsDiv.innerHTML =
-"<div class='loading'>✨ AI is generating reviews...</div>";
-
-try{
-
-const response =
-await fetch(
-
-"/generate-review",
-
-{
-
-method:"POST",
-
-headers:{
-"Content-Type":"application/json"
-},
-
-body:JSON.stringify({star})
-
-}
-
-);
-
-const data =
-await response.json();
 
 
 reviewsDiv.innerHTML = `
@@ -149,24 +118,35 @@ Post Review ⭐
 
 `;
 
-}catch(error){
+function generateReviews(star) {
 
-console.log(error);
+let review = "";
 
-reviewsDiv.innerHTML =
-"<p style='color:white'>❌ AI generation failed</p>";
+if(star === 5){
+
+review =
+"Best paramedical institute in Delhi. Very supportive teachers and excellent learning environment. Highly recommended for students.";
 
 }
+
+if(star === 4){
+
+review =
+"Good institute with experienced faculty and practical learning support. Nice experience overall.";
+
+}
+
+navigator.clipboard.writeText(review);
+
+alert("Review copied ✅ Now paste it on Google Reviews.");
+
+window.open(
+"https://maps.app.goo.gl/efkSvmwZUHpjZ6jQ7",
+"_blank"
+);
 
 }
 
 document.getElementById("five").onclick = () => generateReviews(5);
 
 document.getElementById("four").onclick = () => generateReviews(4);
-window.copyReview = function(text){
-
-navigator.clipboard.writeText(text);
-
-alert("Copied ✅");
-
-}

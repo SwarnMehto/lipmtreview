@@ -125,10 +125,6 @@ const data =
 await response.json();
 
 
-reviewsDiv.innerHTML = "";
-
-reviews.forEach((review)=>{
-
 reviewsDiv.innerHTML = `
 
 <div class="review-box">
@@ -152,8 +148,6 @@ Post Review ⭐
 </div>
 
 `;
-
-});
 
 }catch(error){
 

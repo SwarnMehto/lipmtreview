@@ -15,11 +15,8 @@ app.use(express.json());
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// PUBLIC FOLDER
-app.use(express.static(path.join(__dirname, "public")));
-
-// DIST FOLDER
 app.use(express.static(path.join(__dirname, "dist")));
+app.use(express.static(path.join(__dirname, "public")));
 
 const genAI = new GoogleGenerativeAI(
   process.env.GEMINI_API_KEY
